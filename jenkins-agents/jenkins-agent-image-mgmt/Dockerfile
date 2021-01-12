@@ -4,7 +4,7 @@ ARG SKOPEO_VERSION=1.1.1
 
 USER root
 
-RUN curl -L https://github.com/containers/skopeo/archive/v${SKOPEO_VERSION}.tar.gz | tar -C /tmp -zxf - && \
+RUN curl -L https://github.com/rskrzyszewski/containers-quickstarts/raw/master/jenkins-agents/jenkins-agent-image-mgmt/skopeo-${SKOPEO_VERSION}.tar.gz | tar -C /tmp -zxf - && \
     mv /tmp/skopeo-${SKOPEO_VERSION} /tmp/skopeo && \
     cd /tmp/skopeo && \
     make binary-local DISABLE_CGO=1
